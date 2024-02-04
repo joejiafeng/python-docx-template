@@ -318,6 +318,7 @@ class DocxTemplate(object):
     def map_tree(self, tree):
         root = self.docx._element
         body = root.body
+        body.clear()
         root.replace(body, tree)
 
     def get_headers_footers(self, uri):
